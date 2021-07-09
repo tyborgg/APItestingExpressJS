@@ -12,7 +12,8 @@ app.get("/hi", (req, res)=> {           //configuring the route of the action "G
     res.send(trainingObj);              //to the path '/hi'
 });
                                         //Actions: GET  POST  PUT  PATCH  DELETE 
-app.listen(3000);                       //starts the application on port 3000 
+const port = process.env.port || 3000;
+app.listen(port);                       //starts the application on port 3000 
                                         //use a router to keep code clean, easy to maintain, easy to fix bugs, etc.
                                         //using express generator a template creates app.js which is 
                                         //the "main" file of the entire application
